@@ -6,7 +6,7 @@ on:
 
 
 jobs: 
-    personal_project:
+    simple_deploy:
         runs-on: ubuntu-latest
         steps:
         - name: "Checkouts out"
@@ -41,7 +41,7 @@ jobs:
             server_address: smtp.gmail.com
             server_port: 465
             secure: true
-            subject: "New Docker Image Version for Simple Web App"
+            subject: "A New Docker Image Version for Simple Web App"
             to: "akinolawuraola90@gmail.com"
             from: you <theoafactor@gmail.com>
             body: "New image build: ${{ env.APP_VERSION }}"
