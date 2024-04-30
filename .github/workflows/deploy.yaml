@@ -33,18 +33,18 @@ jobs:
           run: |
                 docker push masturrh/bik_latest:${{ env.APP_VERSION }}
 
-        # - name: "Announce the latest version of the deployment"
-        #   uses: dawidd6/action-send-mail@v3
-        #   with:
-        #     username: akinolawuraola90@gmail.com
-        #     password: ${{ secrets.EMAIL_PASSWORD }}
-        #     server_address: smtp.gmail.com
-        #     server_port: 465
-        #     secure: true
-        #     subject: "New Docker Image Version for Simple Web App"
-        #     to: "akinolawuraola90@gmail.com"
-        #     from: you <theoafactor@gmail.com>
-        #     body: "New image build: ${{ env.APP_VERSION }}"
+        - name: "Announce the latest version of the deployment"
+          uses: dawidd6/action-send-mail@v3
+          with:
+            username: akinolawuraola90@gmail.com
+            password: ${{ secrets.EMAIL_PASSWORD }}
+            server_address: smtp.gmail.com
+            server_port: 465
+            secure: true
+            subject: "New Docker Image Version for Simple Web App"
+            to: "akinolawuraola90@gmail.com"
+            from: you <theoafactor@gmail.com>
+            body: "New image build: ${{ env.APP_VERSION }}"
 
 
             
