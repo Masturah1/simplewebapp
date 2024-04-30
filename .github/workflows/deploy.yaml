@@ -2,7 +2,7 @@ name: Simple App Deployment
 on: 
     push: 
       branches: 
-        - tests
+        - test
         # - canary
 
 jobs: 
